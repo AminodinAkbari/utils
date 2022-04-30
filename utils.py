@@ -1,4 +1,8 @@
 #this function can use as a decorator help u to get how many times spend to get queries from DB
+from django.db import reset_queries
+import datetime
+from django.db import connection
+time = datetime
 def debugger(func):
     def wrapper(*args,**kwargs):
         reset_queries()
